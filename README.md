@@ -19,9 +19,9 @@ Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno 
 
 ## 🚀 Funcionalidades destacadas
 
-- 📋 **Listado interactivo** de contactos con ordenación y marcado de favoritos.  
+- 📋 **Listado interactivo** de contactos con ordenación por nombre, apellidos y ciudad. 
 - 🔍 **Búsqueda instantánea** por nombre con campo flotante.  
-- 🎚️ **Filtros** por estado y ciudad.  
+- 🎚️ **Filtros** por favoritos.  
 - ⚙️ **Acciones con modales personalizados** para eliminar y reactivar contactos.  
 - 📊 **Gráficos dinámicos** con **Chart.js** para visualizar estadísticas.  
 - 🎨 **Diseño propio** sin frameworks, con paleta cálida, sombras suaves y enfoque en accesibilidad.  

@@ -71,10 +71,6 @@ Luego abre en tu navegador:
 
 ---
 
----
-
----
-
 ## 📸 Capturas de pantalla
 
 

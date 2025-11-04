@@ -41,17 +41,16 @@ Asegúrate de tener instalado:
 
 ### 🚀 Instrucciones
 
-1. Clonar el repositorio:
+ 1. Clona este repositorio:
 
-   ```bash
+ ```bash
    git clone https://github.com/mariarosete/agenda-contactos.git
-```
+ ```
 
  2. Acceder a la carpeta del proyecto
 
  ```bash
    cd agenda_nodejs
-
  ```
 
  3. Instalar dependencias
@@ -69,6 +68,8 @@ Asegúrate de tener instalado:
 Luego abre en tu navegador:  
 
 👉 [http://localhost:3000](http://localhost:3000)
+
+---
 
 ---
 

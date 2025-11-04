@@ -24,7 +24,7 @@ Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno 
 - 🎚️ **Filtros** por favoritos.  
 - ⚙️ **Acciones con modales personalizados** para eliminar y reactivar contactos.  
 - 📊 **Gráficos dinámicos** con **Chart.js** para visualizar estadísticas.  
-- 🎨 **Diseño propio** sin frameworks, con paleta cálida, sombras suaves y enfoque en accesibilidad.  
+- 🎨 **Diseño propio** SIN FRAMEWORKS, con paleta cálida, sombras suaves y enfoque en accesibilidad.  
 - 💾 **Datos persistentes** mediante almacenamiento local.  
 
 ---
@@ -81,7 +81,7 @@ Luego abre en tu navegador:
 Este proyecto me permitió:
 
 - 🧠 Profundizar en **JavaScript puro (Vanilla JS)** y buenas prácticas de organización del código.  
-- 🎨 Crear una **UI coherente y accesible** sin frameworks externos.  
+- 🎨 Crear una **UI coherente y accesible** SIN FRAMEWORKS externos.  
 - 🪄 Diseñar **modales personalizados** y efectos suaves solo con CSS.  
 - 📈 Integrar **Chart.js** para representar estadísticas de forma visual.  
 - 🔍 Mejorar la experiencia de usuario mediante **búsquedas y filtros dinámicos**.

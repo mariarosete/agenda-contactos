@@ -94,9 +94,6 @@ Este proyecto me permitió:
 
 ---
 
-
----
-
 ## 📩 Contacto
 
 <p align="center">

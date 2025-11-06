@@ -96,9 +96,13 @@ Luego abre en tu navegador:
 |----------------------|--------------------------|
 | ![Inicio](https://github.com/mariarosete/agenda-contactos/blob/main/images/Inicio.png?raw=true) | ![Gráficos](https://github.com/mariarosete/agenda-contactos/blob/main/images/Graficos.png?raw=true) |
 
-| 📋 Lista de contactos | 📒 Gestión de contactos |
+| 📋 Lista de contactos | 📒 Gestión de contactos | 🔍 Búsqueda de contactos
 |------------------------|---------------------------|
-| ![Lista](https://github.com/mariarosete/agenda-contactos/blob/main/images/ListaContactos.png?raw=true) | ![Gestion](https://github.com/mariarosete/agenda-contactos/blob/main/images/Gestion.png?raw=true) |
+| ![Lista](https://github.com/mariarosete/agenda-contactos/blob/main/images/ListaContactos.png?raw=true) | ![Gestion](https://github.com/mariarosete/agenda-contactos/blob/main/images/Gestion.png?raw=true) |  ![Buscar](https://github.com/mariarosete/agenda-contactos/blob/main/images/Buscar.png?raw=true)
+
+| ✏️ Modal de Edicción | ➕ Modal de Agregar | 🗑️ Modal de eliminación
+|------------------------|---------------------------|
+| ![Editar](https://github.com/mariarosete/agenda-contactos/blob/main/images/Editar.png?raw=true) | ![Agregar](https://github.com/mariarosete/agenda-contactos/blob/main/images/Agregar.png?raw=true) |  ![Eliminar](https://github.com/mariarosete/agenda-contactos/blob/main/images/Eliminar.png?raw=true)
 ---
 
 ## 💡 Lo que aprendí

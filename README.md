@@ -25,7 +25,7 @@ Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno 
 - 📑 **Paginación** en cliente.
 - ✏️ **Gestión** con modales: **crear, editar, eliminar** (pantalla de gestión).  
 - 📊 **Gráficos** con **Chart.js**.  
-- 🎨 **UI propia** (sin frameworks), con colores cálidos y accesibilidad.
+- 🎨 **UI propia** (SIN FRAMEWORKS), con colores cálidos y accesibilidad.
 
 ---
 

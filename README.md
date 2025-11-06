@@ -34,7 +34,7 @@ Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno 
 El proyecto incluye un archivo **`.env.example`** para facilitar la configuración local.  
 Debes duplicarlo como **`.env`** y completar tus datos de conexión:
 
-```bash
+```ini
 # .env.example
 DB_HOST=127.0.0.1
 DB_PORT=3306

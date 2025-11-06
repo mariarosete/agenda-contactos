@@ -38,10 +38,11 @@ Debes duplicarlo como **`.env`** y completar tus datos de conexión:
 # .env.example
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_USER=root
-DB_PASSWORD=temporal
+DB_USER=agenda
+DB_PASSWORD=agenda123
 DB_NAME=agendanode
 DB_CONN_LIMIT=10
+
  ```
 
 ---

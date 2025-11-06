@@ -22,7 +22,7 @@ Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno 
 - 📋 **Listado interactivo** con ordenación por **nombre, apellidos y ciudad**.  
 - 🔍 **Búsqueda instantánea** por nombre con campo flotante.  
 - ⭐ **Filtro** rápido: ver **todos** o **solo favoritos**.  
-- 📑 **Paginación** en cliente:
+- 📑 **Paginación** en cliente.
 - ✏️ **Gestión** con modales: **crear, editar, eliminar** (pantalla de gestión).  
 - 📊 **Gráficos** con **Chart.js**.  
 - 🎨 **UI propia** (sin frameworks), con colores cálidos y accesibilidad.

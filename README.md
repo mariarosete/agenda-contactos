@@ -92,7 +92,13 @@ Luego abre en tu navegador:
 
 ## 📸 Capturas de pantalla
 
-https://github.com/mariarosete/agenda-contactos/blob/main/video.mp4
+| 🧾 Pantalla de inicio | 📊 Gráficos |
+|----------------------|--------------------------|
+| ![Inicio](https://github.com/mariarosete/servidorArchivos/blob/main/images/Inicio.png?raw=true) | ![Gráficos](https://github.com/mariarosete/servidorArchivos/blob/main/images/Graficos.png?raw=true) |
+
+| 📋 Lista de contactos | 📒 Gestión de contactos |
+|------------------------|---------------------------|
+| ![Lista](https://github.com/mariarosete/servidorArchivos/blob/main/images/ListaContactos.png?raw=true) | ![Gestion](https://github.com/mariarosete/servidorArchivos/blob/main/images/Gestion.png?raw=true) |
 ---
 
 ## 💡 Lo que aprendí

@@ -1,6 +1,6 @@
 # 📒 Agenda de Contactos – Node.js + JavaScript + HTML + CSS
 
-![Banner Agenda de Contactos](https://github.com/mariarosete/agenda-contactos/blob/main/bannerAgenda.png?raw=true)
+![Banner Agenda de Contactos](https://github.com/mariarosete/agenda-contactos/blob/main/images/bannerAgenda.png?raw=true)
 
 **Agenda web de contactos** desarrollada con **Node.js**, **JavaScript**, **HTML5** y **CSS3**.  
 Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno cliente**, que evolucionó hasta convertirse en una **app completa, moderna y funcional**, con interfaz cuidada y modales personalizados.

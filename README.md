@@ -141,6 +141,3 @@ Este proyecto me permitió:
 ---
 
 <p align="center">Desarrollado con ❤️ por <b>María Rosete Suárez</b> </p>
-
-
-

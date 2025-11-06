@@ -1,0 +1,246 @@
+/* ==============================
+    Variables de color
+============================== */
+:root{
+  --surface:#FFFFFF;      
+  --border:#887668;       
+  --ink:#2B2A24;          
+  --ink-muted:#6E655C;    
+  --accent:#C58B67;       
+  --accent-weak:#EFD6C8;  
+  --accent-strong:#B27652;
+  --brand-contrast:#A8784D;
+}
+
+/* ======================================================
+   🪟 MODALES PROPIOS (#modal, #editarModal, #confirmModal)
+   ====================================================== */
+
+/* Overlay: oscurece fondo y aplica blur */
+body .modal{
+  display:none;
+  position:fixed; inset:0; z-index:9999;
+  background:rgba(43,42,36,.55);              
+  backdrop-filter: blur(5px) saturate(115%);   
+  overflow:hidden;                             
+}
+
+body .modal .modal-content{
+  position:absolute;
+  top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  margin:0;
+  width:min(640px, 92vw);
+  max-height:88vh;
+  overflow:auto;               
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  box-shadow:0 22px 48px rgba(0,0,0,.18);
+  padding:0;                    
+}
+
+body .modal .signupFrm{
+  position:relative;
+  transform:none;
+  top:auto; left:auto;
+  padding:8px;
+}
+
+/* Panel/formularios (crear/editar) */
+body .modal .form,
+body .modal #registro,
+body .modal #editarContactoForm{
+  background:var(--surface);
+  color:var(--ink);
+  border:0;
+  border-radius:16px;
+  padding:22px 26px 26px;
+}
+
+/* Botón cerrar “x” */
+body .modal .close{
+  position:absolute;
+  top:14px; right:14px;
+  width:36px; height:36px;
+  line-height:36px; text-align:center;
+  font-size:20px; cursor:pointer;
+  border-radius:999px;
+  color:var(--ink);
+  background:var(--accent-weak);
+  border:1px solid var(--border);
+  box-shadow:0 6px 16px rgba(0,0,0,.12);
+  transition:transform .15s, background-color .15s, box-shadow .15s;
+}
+body .modal .close:hover{
+  background:var(--accent);
+  color:#fff;
+  transform:translateY(-1px);
+  box-shadow:0 10px 22px rgba(0,0,0,.16);
+}
+
+/* ===== TÍTULO  ===== */
+body .modal .title{
+  display:flex; align-items:center; justify-content:center;
+  gap:12px;
+  margin:0 0 12px;
+  padding-bottom:10px;
+  font-size:24px; font-weight:900;
+  color:var(--ink);
+  letter-spacing:.3px;
+  text-transform:none;
+  position:relative;
+}
+body .modal .title i{
+  width:36px; height:36px;
+  border-radius:999px;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:var(--accent-weak);
+  color:var(--accent-strong);
+  font-size:18px;
+}
+
+body .modal .title::after{
+  content:"";
+  position:absolute; left:50%; transform:translateX(-50%);
+  bottom:0; width:60%; height:3px; border-radius:2px;
+  background:linear-gradient(90deg, var(--accent), var(--brand-contrast));
+}
+
+/* ===== Campos flotantes (.input/.label) ===== */
+body .modal .inputContainer{
+  position:relative; height:48px; width:100%; margin:14px 0;
+}
+body .modal .input{
+  position:absolute; inset:0;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background:#fff; color:var(--ink);
+  font-size:16px; padding:0 14px; outline:none;
+  transition:border-color .18s, box-shadow .18s;
+}
+/* Label “flotante” */
+body .modal .label{
+  position:absolute; top:14px; left:12px;
+  padding:0 6px; background:var(--surface);
+  color:var(--ink-muted); font-size:15px;
+  transition:transform .18s, color .18s, font-size .18s, top .18s, left .18s;
+}
+body .modal ::placeholder{ color:transparent; } 
+
+body .modal .input:focus{
+  border-color:var(--brand-contrast);
+  box-shadow:0 0 0 .25rem rgba(168,120,77,.22);
+}
+body .modal .input:focus + .label,
+body .modal .input:not(:placeholder-shown)+.label{
+  top:-8px; left:10px; font-size:12px; font-weight:700; color:var(--brand-contrast);
+}
+
+body .modal select.input{ padding:0 36px 0 14px; }
+
+/* Checkbox */
+body .modal .checkbox-input{
+  width:20px; height:20px;
+  border:1px solid var(--border);
+  border-radius:4px; cursor:pointer;
+  accent-color:var(--brand-contrast); 
+}
+body .modal .checkbox-label{ color:var(--ink); font-size:16px; cursor:pointer; }
+
+/* Botón enviar */
+body .modal .submitBtn{
+  display:block; margin:22px auto 0;
+  padding:12px 22px;
+  border:none; border-radius:10px;
+  background:var(--brand-contrast); color:#fff;
+  font-size:15px; font-weight:800; cursor:pointer;
+  transition:transform .15s, filter .15s, box-shadow .15s;
+}
+body .modal .submitBtn:hover{
+  filter:brightness(.93);
+  transform:translateY(-1px);
+  box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+/* ===== Modal de confirmación (eliminar) ===== */
+body #confirmModal .modal-content{
+  width:min(520px, 92vw);
+  max-height:80vh;
+  padding:20px 24px;               
+  text-align:center;
+}
+body #confirmModal h2{
+  margin:0 0 8px;
+  font-size:22px;
+  font-weight:900;
+  color:var(--ink);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+body #confirmModal h2 .accion{ color:var(--accent-strong); }
+
+body #confirmModal p{
+  margin:0 0 16px;
+  color:var(--ink-muted);
+  line-height:1.5;
+}
+
+body #confirmModal .confirm-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:6px;
+}
+
+/* Base de botones*/
+body #confirmModal .confirm-buttons button{
+  -webkit-appearance:none; appearance:none;
+  border:1px solid transparent;
+  border-radius:10px;
+  padding:10px 18px;
+  font-weight:800;
+  cursor:pointer;
+  transition:transform .15s ease, filter .15s ease, box-shadow .15s ease;
+}
+
+/* Confirmar */
+body #confirmModal #confirmarEliminar{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+body #confirmModal #confirmarEliminar:hover{
+  filter:brightness(.96);
+  transform:translateY(-1px);
+  box-shadow:0 12px 24px rgba(0,0,0,.12);
+}
+
+/* Cancelar*/
+body #confirmModal #cancelarEliminar{
+  background:#fff;
+  color:var(--ink);
+  border:1px solid var(--border);
+}
+body #confirmModal #cancelarEliminar:hover{
+  background:#fff;
+  filter:brightness(.98);
+  transform:translateY(-1px);
+}
+
+body #confirmModal .confirm-buttons button:focus-visible{
+  outline:none;
+  box-shadow:0 0 0 3px rgba(255,255,255,.9),
+             0 0 0 6px rgba(197,139,103,.45);
+}
+
+/* ===== Ajuste en pantallas ===== */
+@media (max-height: 560px){
+  body .modal .modal-content{
+    top:52%;
+    transform: translate(-50%, -52%);
+    max-height:92vh;     
+  }
+}

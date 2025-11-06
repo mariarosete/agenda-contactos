@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Contactos</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/agenda.png" sizes="any">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/contactos.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/busqueda.css">
+
+    <!-- JS -->
+   <script src="js/buscarContacto.js"></script>
+   <script src="js/agregarContacto.js"></script>
+   
+   <script src="https://kit.fontawesome.com/5ffd60f9b0.js" crossorigin="anonymous"></script>
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+   <!-- Encabezado con imagen -->
+   <div class="header">
+    <img src="img/agenda.jpg" alt="Imagen de encabezado">
+</div>
+
+<!-- Menú y submenú -->
+  
+   <nav>
+    <ul>
+        <li><a href="/" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="tabla_contactos.html" title="Agenda de contactos"><i class="fas fa-address-book"></i> Contactos</a>
+
+            <ul>
+                <li>
+                  <a href="tabla_contactos.html">
+                    <i class="fas fa-list-ul"></i> Ver Todos
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="#" id="agregar-contacto">
+                    <i class="fas fa-user-plus"></i> Agregar Contacto
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="tabla_gestion.html">
+                    <i class="fas fa-address-book"></i> Gestión de Contactos
+                  </a>
+                </li>
+              
+                <li>
+                  <a href="buscarContacto.html" id="busqueda">
+                    <i class="fas fa-search"></i> Buscar contactos
+                  </a>
+                </li>
+                              
+              </ul>
+              
+        </li>
+    </ul>
+</nav>
+
+    <main>
+        <h1><i class="fas fa-search"></i> Buscar Contactos</h1>
+        
+        <form id="buscarContactosForm">
+            <input type="text" id="nombre" name="nombre" placeholder=" ">
+            <label for="nombre">Nombre</label>
+            <button type="submit">Buscar</button>
+        </form>
+        
+
+        <div id="contenedorResultados" class="centrado">
+            <div id="resultadosBusqueda">
+                <!-- Aquí se mostrarán los resultados de la búsqueda -->
+            </div>
+        </div>
+
+        <!-- Ventana modal para AGREGAR nuevo contacto -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="signupFrm">
+                <form id="registro" class="form">
+                    <h2 class="title"><i class="fas fa-user"></i> Nuevo contacto</h2>
+
+                    <span class="close" id="cerrarModal">&times;</span>
+                    <div class="inputContainer">
+                        <input type="text" id="nombreInput" class="input" placeholder="Nombre">
+                        <label for="nombreInput" class="label">Nombre</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" id="apellidosInput" class="input" placeholder="Apellidos">
+                        <label for="apellidosInput" class="label">Apellidos</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="tel" id="telefonoInput" class="input" placeholder="Teléfono">
+                        <label for="telefonoInput" class="label">Teléfono</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="email" id="emailInput" class="input" placeholder="Email">
+                        <label for="emailInput" class="label">Email</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" id="direccionInput" class="input" placeholder="Dirección">
+                        <label for="direccionInput" class="label">Dirección</label>
+                    </div>
+                    <div class="inputContainer">
+                        <select id="ciudadInput" class="input">
+                            <option value="" selected disabled></option>
+                        </select>
+                        <label for="ciudadInput" class="label">Ciudad</label>
+                    </div>
+
+                    <!-- Campo para marcar como favorito -->
+                    <div class="inputContainer">
+                        <input type="checkbox" id="favoritoInput" class="checkbox-input">
+                        <label for="favoritoInput" class="checkbox-label">Marcar como favorito</label>
+                    </div>
+
+                    <!-- Mensaje de feedback  -->
+                    <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
+                    
+                    <input type="submit" class="submitBtn" value="Añadir">
+                </form>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal de confirmación de borrado -->
+     <div id="confirmModal" class="modal confirm-modal">
+        <div class="modal-content">
+            <h2>Confirmar Eliminación <i class="fas fa-trash-alt accion"></i></h2>
+            <p>¿Estás seguro de que deseas eliminar TODOS los contactos?</p>
+            <div class="confirm-buttons">
+                <button id="confirmarEliminar">Sí, eliminar</button>
+                <button id="cancelarEliminar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    </main>
+
+  </body>
+</html>

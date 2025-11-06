@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Contactos</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/agenda.png" sizes="any">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/contactos.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    <!-- JS  -->
+    <script src="js/agregarContacto.js"></script>
+    <script src="js/gestionContactos.js"></script>
+
+    <script src="https://kit.fontawesome.com/5ffd60f9b0.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Encabezado con imagen -->
+    <div class="header">
+        <img src="img/agenda.jpg" alt="Imagen de encabezado">
+    </div>
+
+    <!-- Menú y submenú -->
+    <nav>
+        <ul>
+            <li><a href="/" title="Inicio"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="tabla_contactos.html" title="Agenda de contactos"><i class="fas fa-address-book"></i>
+                    Contactos</a></li>
+        </ul>
+    </nav>
+
+    <h1><i class="fas fa-address-book"></i> Gestión de Contactos</h1>
+
+    <!-- Botón de agregar contacto -->
+    <div class="agregar-contacto">
+        <a href="#" id="agregar-contacto"><i class="fas fa-plus"></i> Agregar Nuevo Contacto</a>
+    </div>
+
+    <!-- Tabla de contactos -->
+    <div class="contenedor-tabla">
+        <table class="tabla-contactos" data-actions="true">
+          <thead>
+            <tr>
+              <th><i class="fas fa-user"></i> Nombre</th>
+              <th><i class="fas fa-user"></i> Apellidos</th>
+              <th><i class="fas fa-phone"></i> Teléfono</th>
+              <th><i class="fas fa-envelope"></i> Email</th>
+              <th><i class="fas fa-map-marker-alt"></i> Dirección</th>
+              <th><i class="fas fa-city"></i> Ciudad</th>
+              <th><i class="fas fa-star"></i> Favorito</th>
+              <th><i class="fas fa-cogs"></i> Acciones</th>
+            </tr>
+          </thead>
+          <tbody class="lista-contactos"></tbody>
+        </table>
+      </div>
+    <!--  bloque de paginación  -->
+    <div class="paginacion-wrap">
+        <div class="paginacion">
+            <label for="pageSize"><i class="fas fa-list-ol"></i> Por página:</label>
+            <select id="pageSize">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+
+            <button id="prevPage" class="btn" aria-label="Página anterior">&laquo; Anterior</button>
+            <span id="pageInfo" class="paginacion__info"></span>
+            <button id="nextPage" class="btn" aria-label="Página siguiente">Siguiente &raquo;</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="signupFrm">
+                <form id="registro" class="form">
+                    <h2 class="title"><i class="fas fa-user"></i> Nuevo contacto</h2>
+                    <span class="close" id="cerrarModal">&times;</span>
+
+                    <div class="inputContainer">
+                        <input type="text" id="nombreInput" class="input" placeholder="Nombre">
+                        <label for="nombreInput" class="label">Nombre</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <input type="text" id="apellidosInput" class="input" placeholder="Apellidos">
+                        <label for="apellidosInput" class="label">Apellidos</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <input type="tel" id="telefonoInput" class="input" placeholder="Teléfono">
+                        <label for="telefonoInput" class="label">Teléfono</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <input type="email" id="emailInput" class="input" placeholder="Email">
+                        <label for="emailInput" class="label">Email</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <input type="text" id="direccionInput" class="input" placeholder="Dirección">
+                        <label for="direccionInput" class="label">Dirección</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <select id="ciudadInput" class="input">
+                            <option value="" selected disabled></option>
+                        </select>
+                        <label for="ciudadInput" class="label">Ciudad</label>
+                    </div>
+
+                    <!-- Campo para marcar como favorito -->
+                    <div class="inputContainer">
+                        <input type="checkbox" id="favoritoInput" class="checkbox-input">
+                        <label for="favoritoInput" class="checkbox-label">Marcar como favorito</label>
+                    </div>
+
+                    <!-- Mensaje de feedback -->
+                    <div id="formFeedback" class="form-feedback" aria-live="polite"></div>
+
+                    <input type="submit" class="submitBtn" value="Añadir">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal de edición -->
+    <div id="editarModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <!-- Formulario de edición -->
+            <div class="signupFrm">
+                <form id="editarContactoForm" class="form">
+
+                    <!-- Encabezado del formulario -->
+                    <div class="encabezado-formulario">
+                        <div class="imagen-perfil">
+                            <img src="img/avatar3.jpg" alt="Imagen de perfil">
+                        </div>
+                        <h2 class="title">Editar contacto</h2>
+                        <!-- Botón de cierre -->
+                        <span class="close" id="cerrarModal2">&times;</span>
+
+                    </div>
+
+                    <!-- Formulario de edición -->
+                    <input type="hidden" id="contactoIdInput">
+                    <div class="inputContainer">
+                        <input type="text" id="editarNombreInput" class="input" placeholder="Nombre">
+                        <label for="editarNombreInput" class="label">Nombre</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" id="editarApellidosInput" class="input" placeholder="Apellidos">
+                        <label for="editarApellidosInput" class="label">Apellidos</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="tel" id="editarTelefonoInput" class="input" placeholder="Teléfono">
+                        <label for="editarTelefonoInput" class="label">Teléfono</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="email" id="editarEmailInput" class="input" placeholder="Email">
+                        <label for="editarEmailInput" class="label">Email</label>
+                    </div>
+                    <div class="inputContainer">
+                        <input type="text" id="editarDireccionInput" class="input" placeholder="Dirección">
+                        <label for="editarDireccionInput" class="label">Dirección</label>
+                    </div>
+                    <div class="inputContainer">
+                        <select id="editarCiudadInput" class="input">
+                            <option value="" selected disabled></option>
+                        </select>
+                        <label for="editarCiudadInput" class="label">Ciudad</label>
+                    </div>
+
+                    <!-- Campo para marcar como favorito -->
+                    <div class="inputContainer">
+                        <input type="checkbox" id="editarFavoritoInput" class="checkbox-input">
+                        <label for="favoritoInput" class="checkbox-label">Marcar como favorito</label>
+                    </div>
+
+                    <!-- Mensaje de feedback dentro del modal de edición -->
+                    <div id="editFormFeedback" class="form-feedback" aria-live="polite"></div>
+
+                    <input type="submit" class="submitBtn" value="Guardar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="confirmModal" class="modal confirm-modal">
+        <div class="modal-content">
+            <h2>Confirmar Eliminación <i class="fas fa-trash-alt accion"></i></h2>
+            <p>¿Estás seguro de que deseas eliminar este contacto?</p>
+            <div class="confirm-buttons">
+                <button id="confirmarEliminar">Sí, eliminar</button>
+                <button id="cancelarEliminar">Cancelar</button>
+            </div>
+        </div>
+    </div>     
+</body>
+</html>

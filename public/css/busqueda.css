@@ -1,0 +1,220 @@
+/******************************
+ *  Buscar Contactos
+******************************/
+
+/* ==============================
+    Variables de color
+============================== */
+:root{
+  /* Fondos y superficies */
+  --bg:#F5F1EC;          
+  --bg-2:#EFE8E1;        
+  --surface:#FFFFFF;     
+  --border:#887668;      
+
+  /* Texto */
+  --ink:#2B2A24;         
+  --ink-muted:#6E655C;   
+
+  /* Acentos y marca */
+  --accent:#C58B67;        
+  --accent-weak:#EFD6C8;   
+  --accent-strong:#B27652; 
+  --brand-contrast:#A8784D;
+}
+
+/* ==============================
+    Base tipográfica
+============================== */
+body{
+  font-family:'Lato', sans-serif;
+  color:var(--ink);
+}
+
+/* ==============================
+    Contenedor principal
+============================== */
+main{
+  width:min(1100px, 92%);
+  margin:10px auto 48px;
+}
+
+/* ==============================
+    Título de la página
+============================== */
+main h1{
+  margin:24px auto clamp(24px, 4vh, 40px);
+}
+
+/* ==============================
+    Barra de búsqueda
+============================== */
+#buscarContactosForm{
+  position:relative;
+  width:min(640px, 92%);
+  margin:0 auto 18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Icono de lupa  */
+#buscarContactosForm::before{
+  content:"\f002";
+  font-family:"Font Awesome 5 Free";
+  font-weight:900;
+  position:absolute;
+  left:14px; top:50%;
+  transform:translateY(-50%);
+  color:var(--ink-muted);
+  pointer-events:none;
+  font-size:14px;
+}
+
+/* Campo de texto con etiqueta flotante */
+#buscarContactosForm input[type="text"]{
+  flex:1 1 auto;
+  min-width:240px;
+  height:44px;
+  padding:0 14px 0 38px;         
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:#fff;
+  color:var(--ink);
+  font-size:16px;
+  outline:none;
+  transition:border-color .18s ease, box-shadow .18s ease, background-color .18s ease;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+#buscarContactosForm input[type="text"]::placeholder{
+  color:transparent; 
+}
+
+/* Label flotante (usa placeholder=" " en el input) */
+#buscarContactosForm label{
+  position:absolute;
+  left:38px; top:50%;
+  transform:translateY(-50%);
+  padding:0 6px;
+  background:var(--surface);
+  color:var(--ink-muted);
+  font-weight:700;
+  font-size:14px;
+  letter-spacing:.2px;
+  pointer-events:none;
+  transition:all .18s ease;
+  opacity:.9;
+}
+
+/* Estados de foco / texto escrito */
+#buscarContactosForm input[type="text"]:focus{
+  border-color:var(--brand-contrast);
+  box-shadow:0 0 0 .25rem rgba(168,120,77,.20);
+}
+#buscarContactosForm input[type="text"]:focus + label,
+#buscarContactosForm input[type="text"]:not(:placeholder-shown) + label{
+  top:-9px; left:32px;
+  font-size:12px; color:var(--brand-contrast);
+  border-radius:6px;
+}
+
+/* Botón Buscar */
+#buscarContactosForm button[type="submit"]{
+  flex:0 0 auto;
+  height:44px;
+  padding:0 18px;
+  border:none;
+  border-radius:12px;
+  background:var(--brand-contrast);
+  color:#fff;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(0,0,0,.10);
+  transition:transform .15s ease, filter .15s ease, box-shadow .15s ease;
+}
+#buscarContactosForm button[type="submit"]:hover{
+  filter:brightness(.96);
+  transform:translateY(-1px);
+  box-shadow:0 12px 24px rgba(0,0,0,.14);
+}
+
+/* ==============================
+    Zona de resultados
+============================== */
+#contenedorResultados{
+  display:flex;
+  justify-content:center;
+}
+
+/* Tarjeta de resultado */
+.resultado{
+  width:min(760px, 96%);
+  margin:10px auto 28px;
+  padding:16px 18px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:16px;
+  box-shadow:0 14px 32px rgba(0,0,0,.10);
+  text-align:left;
+}
+
+/* Cabecera con nombre */
+.resultado h2{
+  display:flex; align-items:center; gap:10px;
+  margin:0 0 10px;
+  font-size:20px; line-height:1.2;
+  color:var(--ink);
+  font-weight:900;
+  position:relative;
+}
+.resultado h2 i{
+  background:var(--accent-weak);
+  color:var(--accent-strong);
+  width:32px; height:32px;
+  border-radius:10px;
+  display:inline-flex; align-items:center; justify-content:center;
+  font-size:14px;
+  box-shadow:inset 0 0 0 2px rgba(255,255,255,.9);
+}
+
+/* Filas de datos */
+.resultado p{
+  margin:8px 0;
+  font-size:16px;
+  color:var(--ink);
+  display:flex; align-items:center; gap:10px;
+}
+.resultado p i{
+  color:var(--brand-contrast);
+  width:20px; text-align:center;
+}
+.resultado .datos{ color:var(--ink); }
+
+/* Hover  */
+.resultado:hover{
+  box-shadow:0 18px 40px rgba(0,0,0,.14);
+  transform:translateY(-1px);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+
+/* Estado sin resultados */
+#resultadosBusqueda .vacio,
+#resultadosBusqueda:empty::after{
+  content:attr(data-empty) " ";
+  display:block;
+  width:100%;
+  text-align:center;
+  color:var(--ink-muted);
+  padding:18px 0;
+  font-style:italic;
+}
+
+/* ==============================
+    Responsive
+============================== */
+@media (max-width:600px){
+  #buscarContactosForm{ width:100%; gap:8px; }
+  #buscarContactosForm button[type="submit"]{ padding:0 14px; }
+  .resultado{ padding:14px 14px; }
+  .resultado p{ font-size:15px; }
+}

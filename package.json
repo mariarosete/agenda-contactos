@@ -1,0 +1,18 @@
+{
+  "name": "ejemploapi-rest-mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "db:seed": "node scripts/contactos.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^4.18.3",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.2"
+  }
+}

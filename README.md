@@ -92,7 +92,7 @@ Luego abre en tu navegador:
 
 ## 📸 Capturas de pantalla
 
-
+https://github.com/mariarosete/agenda-contactos/blob/main/video.mp4
 ---
 
 ## 💡 Lo que aprendí

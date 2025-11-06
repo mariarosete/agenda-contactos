@@ -94,7 +94,7 @@ Luego abre en tu navegador:
 
 | 🧾 Pantalla de inicio | 📊 Gráficos |
 |----------------------|--------------------------|
-| ![Inicio](https://github.com/mariarosete/servidorArchivos/blob/main/images/Inicio.png?raw=true) | ![Gráficos](https://github.com/mariarosete/servidorArchivos/blob/main/images/Graficos.png?raw=true) |
+| ![Inicio](https://github.com/mariarosete/agenda-contactos/blob/main/images/Inicio.png?raw=true) | ![Gráficos](https://github.com/mariarosete/servidorArchivos/blob/main/images/Graficos.png?raw=true) |
 
 | 📋 Lista de contactos | 📒 Gestión de contactos |
 |------------------------|---------------------------|

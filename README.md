@@ -69,7 +69,7 @@ Asegúrate de tener instalado:
  2. Acceder a la carpeta del proyecto
 
  ```bash
-   cd agenda_nodejs
+   cd agenda-contactos
  ```
 
  3. Instalar dependencias

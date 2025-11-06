@@ -19,15 +19,33 @@ Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno 
 
 ## 🚀 Funcionalidades destacadas
 
-- 📋 **Listado interactivo** de contactos con ordenación por nombre, apellidos y ciudad. 
+- 📋 **Listado interactivo** con ordenación por **nombre, apellidos y ciudad**.  
 - 🔍 **Búsqueda instantánea** por nombre con campo flotante.  
-- 🎚️ **Filtros** por favoritos.  
-- ⚙️ **Acciones con modales personalizados** para eliminar y reactivar contactos.  
-- 📊 **Gráficos dinámicos** con **Chart.js** para visualizar estadísticas.  
-- 🎨 **Diseño propio** SIN FRAMEWORKS, con paleta cálida, sombras suaves y enfoque en accesibilidad.  
-- 💾 **Datos persistentes** mediante almacenamiento local.  
+- ⭐ **Filtro** rápido: ver **todos** o **solo favoritos**.  
+- 📑 **Paginación** en cliente:
+- ✏️ **Gestión** con modales: **crear, editar, eliminar** (pantalla de gestión).  
+- 📊 **Gráficos** con **Chart.js**.  
+- 🎨 **UI propia** (sin frameworks), con colores cálidos y accesibilidad.
 
 ---
+
+## 🗄️ Configuración de entorno (`.env.example`)
+
+El proyecto incluye un archivo **`.env.example`** para facilitar la configuración local.  
+Debes duplicarlo como **`.env`** y completar tus datos de conexión:
+
+```bash
+# .env.example
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=temporal
+DB_NAME=agendanode
+DB_CONN_LIMIT=10
+ ```
+
+---
+
 
 ## 💻 Cómo ejecutar el proyecto
 

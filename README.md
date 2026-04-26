@@ -7,6 +7,17 @@ Incluye capa frontend para visualización y análisis de datos.
 
 ---
 
+## 🌐 Aplicación en funcionamiento
+
+Puedes probar la aplicación aquí:
+
+[👉 Probar Agenda de Contactos](https://agenda-contactos-smid.onrender.com/)
+
+🖥️ Optimizada para versión escritorio (no adaptada a móvil)
+
+---
+
+
 ## 🎥 Demo en vídeo
 
 Puedes ver el funcionamiento de la aplicación aquí:
@@ -16,6 +27,15 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ---
 
+## 🧩 Arquitectura
+
+El proyecto sigue una arquitectura desacoplada típica de aplicaciones web modernas:
+- **Frontend:** Interfaz dinámica sin frameworks (Vanilla JS)
+- **Backend:** API REST desarrollada con Express
+- **Base de datos:** MySQL gestionado en Railway
+- **Comunicación:** Peticiones HTTP mediante `fetch`
+
+---
 
 ## 🛠 Tecnologías utilizadas
 
@@ -29,90 +49,13 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ## 🚀 Funcionalidades destacadas
 
-- 📋 **Listado interactivo** con ordenación por **nombre, apellidos y ciudad**.  
-- 🔍 **Búsqueda instantánea** por nombre con campo flotante.  
-- ⭐ **Filtro** rápido: ver **todos** o **solo favoritos**.  
-- 📑 **Paginación** en cliente.
-- ✏️ **Gestión** con modales: **crear, editar, eliminar** (pantalla de gestión).  
-- 📊 **Gráficos** con **Chart.js**.  
-- 🎨 **UI propia** (SIN FRAMEWORKS), con colores cálidos y accesibilidad.
-
----
-
-## 🗄️ Configuración de entorno (`.env.example`)
-
-El proyecto incluye un archivo **`.env.example`** para facilitar la configuración local.  
-Debes duplicarlo como **`.env`** y completar tus datos de conexión:
-
-```ini
-# .env.example
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_USER=agenda
-DB_PASSWORD=agenda123
-DB_NAME=agendanode
-DB_CONN_LIMIT=10
-
- ```
-
----
-
-
-## 💻 Cómo ejecutar el proyecto
-
-### ✅ Requisitos previos
-Asegúrate de tener instalado:
-
-- **Node.js (v18 o superior)** → [Descargar aquí](https://nodejs.org/)
-- **npm** (incluido con Node.js)
-
----
-
-### 🚀 Instrucciones
-
- 1. Clona este repositorio:
-
- ```bash
-   git clone https://github.com/mariarosete/agenda-contactos.git
- ```
-
- 2. Acceder a la carpeta del proyecto
-
- ```bash
-   cd agenda-contactos
- ```
-
- 3. Instalar dependencias
-
- ```bash
-   npm install
- ```
-
- 4. Ejecutar en modo desarrollo
-
- ```bash
-   npm start
- ```
-
-Luego abre en tu navegador:  
-
-👉 [http://localhost:3000](http://localhost:3000)
-
----
-
-## 📸 Capturas de pantalla
-
-| 🧾 Pantalla de inicio | 📊 Gráficos |
-|---|---|
-| ![Inicio](https://github.com/mariarosete/agenda-contactos/blob/main/images/Inicio.png?raw=true) | ![Gráficos](https://github.com/mariarosete/agenda-contactos/blob/main/images/Graficos.png?raw=true) |
-
-| 📋 Lista de contactos | 📒 Gestión de contactos | 🔍 Búsqueda de contactos |
-|---|---|---|
-| ![Lista](https://github.com/mariarosete/agenda-contactos/blob/main/images/ListaContactos.png?raw=true) | ![Gestión](https://github.com/mariarosete/agenda-contactos/blob/main/images/Gestion.png?raw=true) | ![Buscar](https://github.com/mariarosete/agenda-contactos/blob/main/images/Buscar.png?raw=true) |
-
-| ✏️ Modal de edición | ➕ Modal de agregar | 🗑️ Modal de eliminación |
-|---|---|---|
-| ![Editar](https://github.com/mariarosete/agenda-contactos/blob/main/images/Editar.png?raw=true) | ![Agregar](https://github.com/mariarosete/agenda-contactos/blob/main/images/Agregar.png?raw=true) | ![Eliminar](https://github.com/mariarosete/agenda-contactos/blob/main/images/Eliminar.png?raw=true) |
+- 📋 **Listado interactivo** con ordenación por nombre, apellidos y ciudad  
+- 🔍 **Búsqueda en tiempo real** por nombre  
+- ⭐ **Sistema de favoritos** con filtrado dinámico  
+- 📑 **Paginación en cliente**  
+- ✏️ **CRUD completo** (crear, editar y eliminar contactos)  
+- 📊 **Visualización de datos** con Chart.js  
+- 🎨 **Interfaz personalizada** sin frameworks externos  
 
 ---
 
@@ -120,11 +63,31 @@ Luego abre en tu navegador:
 
 Este proyecto me permitió:
 
-- 🧠 Profundizar en **JavaScript puro (Vanilla JS)** y buenas prácticas de organización del código.  
-- 🎨 Crear una **UI coherente y accesible** SIN FRAMEWORKS externos.  
-- 🪄 Diseñar **modales personalizados** y efectos suaves solo con CSS.  
-- 📈 Integrar **Chart.js** para representar estadísticas de forma visual.  
-- 🔍 Mejorar la experiencia de usuario mediante **búsquedas y filtros dinámicos**.
+- 🧠 Diseñar una **API REST completa con Node.js y Express**
+- 🗄️ Gestionar bases de datos relacionales con **MySQL**
+- 🔗 Conectar frontend y backend mediante **fetch y JSON**
+- 🧩 Aplicar una **arquitectura cliente-servidor real**
+- 🎨 Construir interfaces dinámicas con **JavaScript puro**
+- 🚀 Desplegar aplicaciones en producción usando **Render y Railway**
+
+---
+
+## 📩 Contacto
+
+<p align="center">
+  <a href="mailto:marlarosete89@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/mariarosetesuarez">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/mariarosete">
+    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://mariarosete.vercel.app/">
+    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white">
+  </a>
+</p>
 
 ---
 

@@ -16,8 +16,6 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ---
 
-## 📑 Tabla de contenidos
-
 
 ## 🛠 Tecnologías utilizadas
 
@@ -130,11 +128,6 @@ Este proyecto me permitió:
 
 ---
 
-## 🌐 Enlace al repositorio
-
-🔗 **GitHub:** [https://github.com/mariarosete/agenda-contactos](https://github.com/mariarosete/agenda-contactos)
-
----
 
 ## 📩 Contacto
 

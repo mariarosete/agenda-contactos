@@ -7,6 +7,18 @@ Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno 
 
 ---
 
+## 🎥 Demo en vídeo
+
+Puedes ver el funcionamiento de la aplicación aquí:
+
+👉 http://localhost:5173/src/assets/agenda.mp4
+
+
+---
+
+## 📑 Tabla de contenidos
+
+
 ## 🛠 Tecnologías utilizadas
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)

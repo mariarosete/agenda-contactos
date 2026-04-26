@@ -2,8 +2,8 @@
 
 ![Banner Agenda de Contactos](https://github.com/mariarosete/agenda-contactos/blob/main/images/bannerAgenda.png?raw=true)
 
-**Agenda web de contactos** desarrollada con **Node.js**, **JavaScript**, **HTML5** y **CSS3**.  
-Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno cliente**, que evolucionó hasta convertirse en una **app completa, moderna y funcional**, con interfaz cuidada y modales personalizados.
+Desarrollo de backend en Node.js con base de datos MySQL, creando una API REST para la gestión de contactos con operaciones CRUD, búsqueda avanzada, paginación y sistema de favoritos. 
+Incluye capa frontend para visualización y análisis de datos.
 
 ---
 
@@ -11,7 +11,7 @@ Un proyecto nacido como práctica del ciclo **DAW – Desarrollo web en entorno 
 
 Puedes ver el funcionamiento de la aplicación aquí:
 
-👉 http://localhost:5173/src/assets/agenda.mp4
+👉 https://mariarosete.vercel.app/assets/agenda-Bt2Pe7ie.mp4
 
 
 ---

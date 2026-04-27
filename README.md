@@ -13,7 +13,7 @@ Puedes probar la aplicación aquí:
 
 [👉 Probar Agenda de Contactos](https://agenda-contactos-smid.onrender.com/)
 
-🖥️ Optimizada para versión escritorio (no adaptada a móvil)
+🖥️ Optimizada para versión ESCRITORIO
 
 ---
 

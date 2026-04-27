@@ -22,7 +22,7 @@ Puedes probar la aplicación aquí:
 
 Puedes ver el funcionamiento de la aplicación aquí:
 
-👉 https://mariarosete.vercel.app/assets/agenda-Bt2Pe7ie.mp4
+👉 https://mariarosete.vercel.app/agenda.mp4
 
 
 ---

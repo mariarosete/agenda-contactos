@@ -49,13 +49,13 @@ El proyecto sigue una arquitectura desacoplada típica de aplicaciones web moder
 
 ## 🚀 Funcionalidades destacadas
 
-- 📋 **Listado interactivo** con ordenación por nombre, apellidos y ciudad  
-- 🔍 **Búsqueda en tiempo real** por nombre  
-- ⭐ **Sistema de favoritos** con filtrado dinámico  
-- 📑 **Paginación en cliente**  
-- ✏️ **CRUD completo** (crear, editar y eliminar contactos)  
-- 📊 **Visualización de datos** con Chart.js  
-- 🎨 **Interfaz personalizada** sin frameworks externos  
+- **Listado interactivo** con ordenación por nombre, apellidos y ciudad  
+- **Búsqueda en tiempo real** por nombre  
+- **Sistema de favoritos** con filtrado dinámico  
+- **Paginación en cliente**  
+- **CRUD completo** (crear, editar y eliminar contactos)  
+- **Visualización de datos** con Chart.js  
+- **Interfaz personalizada** sin frameworks externos  
 
 ---
 
@@ -63,12 +63,12 @@ El proyecto sigue una arquitectura desacoplada típica de aplicaciones web moder
 
 Este proyecto me permitió:
 
-- 🧠 Diseñar una **API REST completa con Node.js y Express**
-- 🗄️ Gestionar bases de datos relacionales con **MySQL**
-- 🔗 Conectar frontend y backend mediante **fetch y JSON**
-- 🧩 Aplicar una **arquitectura cliente-servidor real**
-- 🎨 Construir interfaces dinámicas con **JavaScript puro**
-- 🚀 Desplegar aplicaciones en producción usando **Render y Railway**
+- Diseñar una **API REST completa con Node.js y Express**
+- Gestionar bases de datos relacionales con **MySQL**
+- Conectar frontend y backend mediante **fetch y JSON**
+-  Aplicar una **arquitectura cliente-servidor real**
+-  Construir interfaces dinámicas con **JavaScript puro**
+-  Desplegar aplicaciones en producción usando **Render y Railway**
 
 ---
 

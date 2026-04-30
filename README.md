@@ -27,7 +27,7 @@ Puedes ver el funcionamiento de la aplicación aquí:
 
 ---
 
-## 🧩 Arquitectura
+## Arquitectura
 
 El proyecto sigue una arquitectura desacoplada típica de aplicaciones web modernas:
 - **Frontend:** Interfaz dinámica sin frameworks (Vanilla JS)
@@ -47,7 +47,7 @@ El proyecto sigue una arquitectura desacoplada típica de aplicaciones web moder
 
 ---
 
-## 🚀 Funcionalidades destacadas
+## Funcionalidades destacadas
 
 - **Listado interactivo** con ordenación por nombre, apellidos y ciudad  
 - **Búsqueda en tiempo real** por nombre  

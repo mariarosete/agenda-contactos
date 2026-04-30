@@ -59,7 +59,7 @@ El proyecto sigue una arquitectura desacoplada típica de aplicaciones web moder
 
 ---
 
-## 💡 Lo que aprendí
+## Lo que aprendí
 
 Este proyecto me permitió:
 

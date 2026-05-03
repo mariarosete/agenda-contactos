@@ -109,12 +109,6 @@ h1::after{
   box-shadow: 0 5px 10px rgba(0,0,0,.06);
   opacity:.9;
 }
-@media (max-width: 640px){
-  h1{ gap:10px; font-size: clamp(24px, 5.5vw, 30px); }
-  h1 > i{ width:34px; height:34px; font-size:16px; border-radius: 9px; }
-  h1::before{ width:56px; }
-  h1::after{ width: clamp(100px, 40%, 180px); }
-}
 
 /******************************
  *  MENÚ PRINCIPAL + SUBMENÚ
@@ -493,17 +487,19 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
 
 
 /* ==============================
-   RESPONSIVE HOME / MÓVIL
+   RESPONSIVE MÓVIL 
 ============================== */
 
 @media (max-width: 768px) {
 
+  html,
   body {
+    width: 100%;
     overflow-x: hidden;
   }
 
   .header {
-    --h: clamp(150px, 28vh, 240px);
+    --h: 170px;
   }
 
   h1 {
@@ -511,9 +507,17 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     margin: 20px auto 28px;
     text-align: center;
     flex-wrap: wrap;
+    font-size: 26px;
+    gap: 10px;
   }
 
-  /* NAV móvil */
+  h1 > i {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
+  /* MENÚ */
   nav {
     height: auto;
     padding: 10px 0;
@@ -524,6 +528,7 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     flex-direction: column;
     gap: 8px;
     padding: 0 14px;
+    box-sizing: border-box;
   }
 
   nav ul > li {
@@ -534,8 +539,8 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     width: 100%;
     justify-content: center;
     box-sizing: border-box;
-    padding: 12px 14px;
     font-size: 15px;
+    padding: 12px 14px;
   }
 
   nav ul ul {
@@ -556,42 +561,64 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     text-align: center;
   }
 
-  /* HOME cards */
+  /* CONTENEDOR PRINCIPAL */
   .contenedor {
-    height: auto;
+    height: auto !important;
+    min-height: auto !important;
     padding: 20px 0 32px;
+    display: block !important;
   }
 
   .secciones {
     width: 100%;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    gap: 18px;
     margin-top: 0;
   }
 
-  .seccion {
-    width: min(90%, 360px);
-    height: auto;
-    margin: 14px auto;
+  /* TARJETAS */
+  .seccion,
+  a.seccion {
+    display: block !important;
+    width: 92% !important;
+    max-width: 360px;
+    height: auto !important;
+    min-height: unset !important;
+    margin: 0 auto !important;
     padding: 14px;
     box-sizing: border-box;
+    text-align: center;
   }
 
   .seccion img {
-    width: 100%;
-    height: 210px;
+    width: 100% !important;
+    height: 190px !important;
     object-fit: cover;
+    border-radius: 10px;
+    display: block;
   }
 
   .seccion h2 {
     font-size: 20px;
+    line-height: 1.15;
+    margin-top: 12px;
+  }
+
+  .seccion h2::after {
+    width: 55%;
   }
 
   p {
     font-size: 16px;
     line-height: 1.45;
+    margin-top: 14px;
   }
 
-  /* Tablas en móvil */
+  /* TABLAS */
   .contenedor-tabla {
     width: 94%;
     overflow-x: auto;
@@ -608,7 +635,7 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     font-size: 14px;
   }
 
-  /* Selects */
+  /* SELECTS */
   #selectOrden,
   #filtroContactos {
     width: 100%;
@@ -620,7 +647,7 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     margin-right: 0;
   }
 
-  /* Gráficos */
+  /* GRÁFICOS */
   .contenedor-graficos {
     grid-template-columns: 1fr;
     width: 92%;
@@ -636,7 +663,7 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     height: 240px !important;
   }
 
-  /* Paginación */
+  /* PAGINACIÓN */
   .paginacion {
     gap: 8px;
   }
@@ -663,18 +690,14 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     font-size: 24px;
   }
 
-  h1 > i {
-    width: 32px;
-    height: 32px;
-  }
-
-  .seccion {
-    width: 92%;
-    margin: 12px auto;
+  .seccion,
+  a.seccion {
+    width: 92% !important;
+    max-width: 330px;
   }
 
   .seccion img {
-    height: 180px;
+    height: 175px !important;
   }
 
   .seccion h2 {
@@ -689,7 +712,6 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
     font-size: 14px;
   }
 }
-
 
 
 

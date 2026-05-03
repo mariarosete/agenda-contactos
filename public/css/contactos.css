@@ -456,10 +456,6 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
 .form-feedback.ok { color: #2e7d32; }
 .form-feedback.error { color: #c62828; }
 
-@media (max-width: 768px){
-  .contenedor-grafico{ min-height: 300px; }
-  .contenedor-grafico canvas{ height: 260px !important; }
-}
 
 /******************************
  *   PAGINACIÓN
@@ -494,3 +490,210 @@ thead th[colspan="8"]{ text-align: center; vertical-align: middle; }
 .paginacion .btn:disabled{opacity:.5;cursor:not-allowed}
 .paginacion__info{min-width:180px;text-align:center}
 .paginacion, .paginacion-wrap{ float:none !important; }
+
+
+/* ==============================
+   RESPONSIVE HOME / MÓVIL
+============================== */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .header {
+    --h: clamp(150px, 28vh, 240px);
+  }
+
+  h1 {
+    width: 90%;
+    margin: 20px auto 28px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  /* NAV móvil */
+  nav {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 14px;
+  }
+
+  nav ul > li {
+    width: 100%;
+  }
+
+  nav ul > li > a {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  nav ul ul {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-sizing: border-box;
+  }
+
+  nav ul ul::before {
+    display: none;
+  }
+
+  nav ul ul li a {
+    text-align: center;
+  }
+
+  /* HOME cards */
+  .contenedor {
+    height: auto;
+    padding: 20px 0 32px;
+  }
+
+  .secciones {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .seccion {
+    width: min(90%, 360px);
+    height: auto;
+    margin: 14px auto;
+    padding: 14px;
+    box-sizing: border-box;
+  }
+
+  .seccion img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+  }
+
+  .seccion h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  /* Tablas en móvil */
+  .contenedor-tabla {
+    width: 94%;
+    overflow-x: auto;
+    justify-content: flex-start;
+  }
+
+  .tabla-contactos {
+    min-width: 720px;
+  }
+
+  .tabla-contactos thead th,
+  .tabla-contactos td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Selects */
+  #selectOrden,
+  #filtroContactos {
+    width: 100%;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+  #selectOrden {
+    margin-right: 0;
+  }
+
+  /* Gráficos */
+  .contenedor-graficos {
+    grid-template-columns: 1fr;
+    width: 92%;
+    gap: 18px;
+  }
+
+  .contenedor-grafico {
+    min-height: 280px;
+    padding: 14px;
+  }
+
+  .contenedor-grafico canvas {
+    height: 240px !important;
+  }
+
+  /* Paginación */
+  .paginacion {
+    gap: 8px;
+  }
+
+  .paginacion__info {
+    min-width: 100%;
+    font-size: 14px;
+  }
+
+  .paginacion .btn {
+    padding: .45rem .65rem;
+  }
+
+  .close {
+    right: 8px;
+    top: 8px;
+    color: white;
+  }
+}
+
+@media (max-width: 420px) {
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h1 > i {
+    width: 32px;
+    height: 32px;
+  }
+
+  .seccion {
+    width: 92%;
+    margin: 12px auto;
+  }
+
+  .seccion img {
+    height: 180px;
+  }
+
+  .seccion h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  nav ul > li > a {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
